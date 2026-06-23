@@ -64,8 +64,7 @@ header span{font-size:13px;opacity:.7;font-weight:normal}
 </div>
 
 <script>
-const SUPABASE_URL = 'https://lrrbequsnlegwqtzdwwb.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxycmJlcXVzbmxlZ3dxdHpkd3diIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3Mzk0NzAsImV4cCI6MjA5NjMxNTQ3MH0.peqhzmPu_7TbP7ssovJSnM2A0LKAF3uNfGuWs9kWJqk';
+const DATA_URL = 'data.json';
 
 // ===== PIECES =====
 const PC = {FU:'歩',KY:'香',KE:'桂',GI:'銀',KI:'金',KA:'角',HI:'飛',OU:'玉',TO:'と',NY:'杏',NK:'圭',NG:'全',UM:'馬',RY:'龍'};
@@ -297,14 +296,13 @@ function renderPanel() {
   body.appendChild(treeWrap);
 }
 
-// ===== SUPABASE =====
+// ===== DATA LOAD =====
 async function loadNodes() {
   try {
-    const res = await fetch(SUPABASE_URL + '/rest/v1/joseki_nodes?select=*&order=created_at.asc', {
-      headers: {'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY}
-    });
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
     if (!res.ok) return null;
-    return await res.json();
+    const json = await res.json();
+    return json.joseki || null;
   } catch(e) { return null; }
 }
 
