@@ -1,60 +1,45 @@
 {
   "joseki": [
-    {
-      "id": "root1",
-      "parent_id": null,
-      "name": "対四間飛車急戦",
-      "move_text": null,
-      "move": null,
-      "note": "四間飛車に対する急戦形"
-    },
-    {
-      "id": "n1", "parent_id": "root1",
-      "move_text": "7六歩",
-      "move": {"from":[6,6],"to":[5,6],"side":0,"piece":"FU","promote":false,"drop":false},
-      "note": ""
-    },
-    {
-      "id": "n2", "parent_id": "n1",
-      "move_text": "3四歩",
-      "move": {"from":[2,2],"to":[3,2],"side":1,"piece":"FU","promote":false,"drop":false},
-      "note": ""
-    },
-    {
-      "id": "n3", "parent_id": "n2",
-      "move_text": "2六歩",
-      "move": {"from":[6,1],"to":[5,1],"side":0,"piece":"FU","promote":false,"drop":false},
-      "note": "飛車先を突く"
-    },
-    {
-      "id": "n4", "parent_id": "n3",
-      "move_text": "4二飛",
-      "move": {"from":[1,7],"to":[1,3],"side":1,"piece":"HI","promote":false,"drop":false},
-      "note": "四間飛車"
-    },
-    {
-      "id": "n5a", "parent_id": "n4",
-      "move_text": "2五歩",
-      "move": {"from":[5,1],"to":[4,1],"side":0,"piece":"FU","promote":false,"drop":false},
-      "note": "棒銀系"
-    },
-    {
-      "id": "n5b", "parent_id": "n4",
-      "move_text": "4八銀",
-      "move": {"from":[8,2],"to":[7,3],"side":0,"piece":"GI","promote":false,"drop":false},
-      "note": "急戦矢倉系"
-    },
-    {
-      "id": "n6a", "parent_id": "n5a",
-      "move_text": "3三角",
-      "move": {"from":[1,1],"to":[2,2],"side":1,"piece":"KA","promote":false,"drop":false},
-      "note": "飛車先受け"
-    },
-    {
-      "id": "n7a", "parent_id": "n6a",
-      "move_text": "3八銀",
-      "move": {"from":[8,2],"to":[7,2],"side":0,"piece":"GI","promote":false,"drop":false},
-      "note": "棒銀始動"
-    }
+    {"id":"root1","parent_id":null,"name":"対四間飛車棒銀","move_text":null,"move":null,"note":"四間飛車に対する棒銀急戦"},
+    {"id":"n1","parent_id":"root1","move_text":"7六歩","move":{"from":[6,6],"to":[5,6],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"n2","parent_id":"n1","move_text":"3四歩","move":{"from":[2,2],"to":[3,2],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"n3","parent_id":"n2","move_text":"2六歩","move":{"from":[6,1],"to":[5,1],"side":0,"piece":"FU","promote":false,"drop":false},"note":"飛車先を突く"},
+    {"id":"n4","parent_id":"n3","move_text":"4四歩","move":{"from":[2,3],"to":[3,3],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"n5","parent_id":"n4","move_text":"2五歩","move":{"from":[5,1],"to":[4,1],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"n6","parent_id":"n5","move_text":"3三角","move":{"from":[1,1],"to":[2,2],"side":1,"piece":"KA","promote":false,"drop":false},"note":"飛車先を受ける"},
+    {"id":"n7","parent_id":"n6","move_text":"4八銀","move":{"from":[8,2],"to":[7,3],"side":0,"piece":"GI","promote":false,"drop":false},"note":"棒銀の準備"},
+    {"id":"n8","parent_id":"n7","move_text":"4二飛","move":{"from":[1,7],"to":[1,3],"side":1,"piece":"HI","promote":false,"drop":false},"note":"四間飛車に振る"},
+    {"id":"n9","parent_id":"n8","move_text":"3八銀","move":{"from":[7,3],"to":[6,3],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
+    {"id":"n10","parent_id":"n9","move_text":"6二玉","move":{"from":[0,4],"to":[1,5],"side":1,"piece":"OU","promote":false,"drop":false},"note":"玉を囲いへ"},
+    {"id":"n11","parent_id":"n10","move_text":"2七銀","move":{"from":[6,3],"to":[5,2],"side":0,"piece":"GI","promote":false,"drop":false},"note":"棒銀始動"},
+    {"id":"n12","parent_id":"n11","move_text":"7二玉","move":{"from":[1,5],"to":[1,6],"side":1,"piece":"OU","promote":false,"drop":false},"note":""},
+    {"id":"n13","parent_id":"n12","move_text":"2六銀","move":{"from":[5,2],"to":[4,2],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
+    {"id":"n14","parent_id":"n13","move_text":"8二玉","move":{"from":[1,6],"to":[1,7],"side":1,"piece":"OU","promote":false,"drop":false},"note":"美濃囲いへ"},
+    {"id":"n15a","parent_id":"n14","move_text":"2四歩","move":{"from":[4,1],"to":[3,1],"side":0,"piece":"FU","promote":false,"drop":false},"note":"仕掛け！"},
+    {"id":"n15b","parent_id":"n14","move_text":"3六歩","move":{"from":[6,2],"to":[5,2],"side":0,"piece":"FU","promote":false,"drop":false},"note":"様子見"},
+    {"id":"n16a","parent_id":"n15a","move_text":"同　歩","move":{"from":[2,1],"to":[3,1],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"n17a","parent_id":"n16a","move_text":"同　銀","move":{"from":[4,2],"to":[3,1],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
+    {"id":"n18a","parent_id":"n17a","move_text":"2三銀","move":{"from":[1,2],"to":[2,2],"side":1,"piece":"GI","promote":false,"drop":false},"note":"銀で2四を守る"},
+    {"id":"n18b","parent_id":"n17a","move_text":"4三銀","move":{"from":[1,2],"to":[2,3],"side":1,"piece":"GI","promote":false,"drop":false},"note":"中央を厚くする"},
+
+    {"id":"root2","parent_id":null,"name":"対四間飛車右四間","move_text":null,"move":null,"note":"右四間飛車による急戦"},
+    {"id":"r2n1","parent_id":"root2","move_text":"7六歩","move":{"from":[6,6],"to":[5,6],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"r2n2","parent_id":"r2n1","move_text":"3四歩","move":{"from":[2,2],"to":[3,2],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"r2n3","parent_id":"r2n2","move_text":"6六歩","move":{"from":[6,5],"to":[5,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":"角道を止める"},
+    {"id":"r2n4","parent_id":"r2n3","move_text":"4二飛","move":{"from":[1,7],"to":[1,3],"side":1,"piece":"HI","promote":false,"drop":false},"note":"四間飛車"},
+    {"id":"r2n5","parent_id":"r2n4","move_text":"6八銀","move":{"from":[8,6],"to":[7,6],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
+    {"id":"r2n6","parent_id":"r2n5","move_text":"6二玉","move":{"from":[0,4],"to":[1,5],"side":1,"piece":"OU","promote":false,"drop":false},"note":""},
+    {"id":"r2n7","parent_id":"r2n6","move_text":"5八金右","move":{"from":[8,3],"to":[7,4],"side":0,"piece":"KI","promote":false,"drop":false},"note":""},
+    {"id":"r2n8","parent_id":"r2n7","move_text":"7二玉","move":{"from":[1,5],"to":[1,6],"side":1,"piece":"OU","promote":false,"drop":false},"note":""},
+    {"id":"r2n9","parent_id":"r2n8","move_text":"6七金","move":{"from":[7,4],"to":[6,5],"side":0,"piece":"KI","promote":false,"drop":false},"note":""},
+    {"id":"r2n10","parent_id":"r2n9","move_text":"8二玉","move":{"from":[1,6],"to":[1,7],"side":1,"piece":"OU","promote":false,"drop":false},"note":"美濃完成"},
+    {"id":"r2n11","parent_id":"r2n10","move_text":"6八飛","move":{"from":[7,1],"to":[7,5],"side":0,"piece":"HI","promote":false,"drop":false},"note":"右四間飛車！"},
+    {"id":"r2n12a","parent_id":"r2n11","move_text":"4三銀","move":{"from":[1,2],"to":[2,3],"side":1,"piece":"GI","promote":false,"drop":false},"note":"銀で守る"},
+    {"id":"r2n12b","parent_id":"r2n11","move_text":"5二金左","move":{"from":[1,5],"to":[2,4],"side":1,"piece":"KI","promote":false,"drop":false},"note":"金で守る"},
+    {"id":"r2n13a","parent_id":"r2n12a","move_text":"6五歩","move":{"from":[5,5],"to":[4,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":"仕掛け！"},
+    {"id":"r2n14a","parent_id":"r2n13a","move_text":"6四歩","move":{"from":[2,5],"to":[3,5],"side":1,"piece":"FU","promote":false,"drop":false},"note":"歩で受ける"},
+    {"id":"r2n15a","parent_id":"r2n14a","move_text":"同　歩","move":{"from":[4,5],"to":[3,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
+    {"id":"r2n16a","parent_id":"r2n15a","move_text":"同　銀","move":{"from":[2,3],"to":[3,5],"side":1,"piece":"GI","promote":false,"drop":false},"note":""},
+    {"id":"r2n17a","parent_id":"r2n16a","move_text":"6四歩","move":{"from":[6,5],"to":[5,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":"歩を打つ"}
   ]
 }
