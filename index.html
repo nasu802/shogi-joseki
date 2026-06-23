@@ -55,6 +55,24 @@ header .sub{font-size:12px;color:#8b7040;letter-spacing:.05em}
 .piece-g{color:#06082a;transform:rotate(180deg);display:inline-block;text-shadow:0 1px 0 rgba(200,220,255,.3)}
 .piece-promo{color:#bb1100!important}
 
+/* Import modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;z-index:100}
+.modal-box{background:#1a1208;border:1px solid #3a2510;border-radius:8px;padding:24px;width:90%;max-width:520px;max-height:80vh;overflow-y:auto}
+.modal-title{font-size:15px;color:#d4a850;font-weight:bold;margin-bottom:4px}
+.modal-sub{font-size:11px;color:#6b5030;margin-bottom:14px;line-height:1.6}
+.modal-label{font-size:12px;color:#8b7040;margin-bottom:4px;margin-top:12px}
+.modal-input{width:100%;background:#0e0b07;border:1px solid #3a2510;color:#e8d5a8;padding:8px;border-radius:4px;font-size:13px;font-family:monospace}
+.modal-input:focus{outline:none;border-color:#d4a850}
+textarea.modal-input{height:160px;resize:vertical}
+.modal-btns{display:flex;gap:8px;margin-top:14px;justify-content:flex-end}
+.modal-btn{padding:7px 18px;border-radius:4px;font-size:13px;cursor:pointer;border:1px solid #3a2510}
+.modal-btn.primary{background:#d4a850;color:#1a1208;border-color:#d4a850;font-weight:bold}
+.modal-btn.primary:hover{background:#e8c060}
+.modal-btn.cancel{background:#1a1208;color:#8b7040}
+.modal-btn.cancel:hover{color:#d4a850;border-color:#5a3010}
+.import-btn{padding:5px 12px;background:#1a1208;border:1px solid #3a2510;color:#8b7040;font-size:12px;border-radius:4px;cursor:pointer;margin-left:auto}
+.import-btn:hover{color:#d4a850;border-color:#5a3010}
+
 /* Right panel */
 #right{flex:1;overflow-y:auto;background:#130f08;display:flex;flex-direction:column}
 #right::-webkit-scrollbar{width:4px}
@@ -123,7 +141,27 @@ header .sub{font-size:12px;color:#8b7040;letter-spacing:.05em}
 <header>
   <h1>将棋定跡ツリー</h1>
   <span class="sub">対振り飛車急戦形</span>
+  <div style="margin-left:auto">
+    <button class="import-btn" onclick="openImport()">+ KIFインポート</button>
+  </div>
 </header>
+<div id="import-modal" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">KIFインポート</div>
+    <div class="modal-sub">将棋所でKIF形式で保存した棋譜を貼り付けてください。<br>「手数 指手(from)」形式（例: 1 ７六歩(77)）に対応しています。</div>
+    <div class="modal-label">定跡名</div>
+    <input class="modal-input" id="import-name" type="text" placeholder="例: 対四間飛車棒銀">
+    <div class="modal-label">メモ（任意）</div>
+    <input class="modal-input" id="import-note" type="text" placeholder="例: 棒銀による急戦">
+    <div class="modal-label">KIFテキスト</div>
+    <textarea class="modal-input" id="import-kif" placeholder="   1 ７六歩(77)&#10;   2 ３四歩(33)&#10;   3 ２六歩(27)&#10;   4 ４二飛(82)&#10;..."></textarea>
+    <div id="import-error" style="color:#cc4020;font-size:12px;margin-top:8px;display:none"></div>
+    <div class="modal-btns">
+      <button class="modal-btn cancel" onclick="closeImport()">キャンセル</button>
+      <button class="modal-btn primary" onclick="doImport()">追加する</button>
+    </div>
+  </div>
+</div>
 <div id="app">
   <div id="left">
     <div id="move-history">（初期局面）</div>
@@ -296,6 +334,125 @@ function renderPanel(){
 async function loadNodes(){
   try{const r=await fetch(DATA_URL+'?t='+Date.now());if(!r.ok)return null;const j=await r.json();return j.joseki||null}
   catch(e){return null}
+}
+
+// ===== KIF IMPORT =====
+const KANJI_COL = {'１':1,'２':2,'３':3,'４':4,'５':5,'６':6,'７':7,'８':8,'９':9,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9};
+const KANJI_ROW = {'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9};
+const PIECE_MAP = {'歩':'FU','香':'KY','桂':'KE','銀':'GI','金':'KI','角':'KA','飛':'HI','玉':'OU','王':'OU','と':'TO','成香':'NY','成桂':'NK','成銀':'NG','馬':'UM','龍':'RY','竜':'RY'};
+
+function parseKif(text) {
+  const lines = text.split('\n');
+  const moves = [];
+  let prevTo = null;
+  for (const line of lines) {
+    // Drop moves: "3 ３二歩打" (no from indicator in parens)
+    const dropM = line.match(/^\s*(\d+)\s+([１-９1-9][一二三四五六七八九]\S+打)/);
+    if (dropM) {
+      const num = parseInt(dropM[1]);
+      const moveStr = dropM[2].trim();
+      let tc=null,tr=null;
+      for(const[k,v] of Object.entries(KANJI_COL)){if(moveStr.startsWith(k)){tc=v;break;}}
+      if(tc!==null){const rest=moveStr.slice(1);for(const[k,v] of Object.entries(KANJI_ROW)){if(rest.startsWith(k)){tr=v;break;}}}
+      if(tc===null||tr===null) continue;
+      const pieceStr=moveStr.slice(2).replace('打','');
+      let piece=null;
+      for(const[k,v] of Object.entries(PIECE_MAP)){if(pieceStr.startsWith(k)){piece=v;break;}}
+      if(!piece) continue;
+      const side=(num%2===1)?0:1;
+      prevTo=[tr-1,tc-1];
+      moves.push({num,move_text:moveStr,move:{from:null,to:[tr-1,tc-1],side,piece,promote:false,drop:true}});
+      continue;
+    }
+    const m = line.match(/^\s*(\d+)\s+([\s\S]*?)\(\s*(\d)(\d)\s*\)/);
+    if (!m) continue;
+    const num = parseInt(m[1]);
+    const moveStr = m[2].trim();
+    const fc = parseInt(m[3]);
+    const fr = parseInt(m[4]);
+    const isSame = moveStr.startsWith('同');
+    let tc, tr;
+    if (isSame) {
+      if (!prevTo) continue;
+      [tr,tc]=[prevTo[0]+1,prevTo[1]+1];
+    } else {
+      tc=null;tr=null;
+      for(const[k,v] of Object.entries(KANJI_COL)){if(moveStr.startsWith(k)){tc=v;break;}}
+      if(tc!==null){const rest=moveStr.slice(1);for(const[k,v] of Object.entries(KANJI_ROW)){if(rest.startsWith(k)){tr=v;break;}}}
+      if(tc===null||tr===null) continue;
+    }
+    const rawPiece = isSame ? moveStr.replace(/^同\s*/,'') : moveStr.slice(2);
+    let piece=null;
+    for(const[k,v] of Object.entries(PIECE_MAP)){if(rawPiece.startsWith(k)){piece=v;break;}}
+    if(!piece) continue;
+    const promote=rawPiece.includes('成')&&!['と','成香','成桂','成銀','馬','龍','竜'].some(p=>rawPiece.startsWith(p));
+    const side=(num%2===1)?0:1;
+    prevTo=[tr-1,tc-1];
+    moves.push({num,move_text:moveStr.replace(/\s+/g,'').replace(/\(\d+\)/,''),
+      move:{from:[fr-1,fc-1],to:[tr-1,tc-1],side,piece,promote,drop:false}});
+  }
+  return moves;
+}
+
+function openImport() {
+  document.getElementById('import-modal').style.display = 'flex';
+  document.getElementById('import-error').style.display = 'none';
+}
+function closeImport() {
+  document.getElementById('import-modal').style.display = 'none';
+}
+
+async function doImport() {
+  const name = document.getElementById('import-name').value.trim();
+  const note = document.getElementById('import-note').value.trim();
+  const kif  = document.getElementById('import-kif').value;
+  const errEl = document.getElementById('import-error');
+
+  if (!name) { errEl.textContent='定跡名を入力してください'; errEl.style.display='block'; return; }
+  const moves = parseKif(kif);
+  if (!moves.length) { errEl.textContent='KIFを正しく読み取れませんでした。形式を確認してください。'; errEl.style.display='block'; return; }
+
+  // Fetch current data.json
+  let current = {joseki:[]};
+  try { const r=await fetch('data.json?t='+Date.now()); if(r.ok) current=await r.json(); } catch(e){}
+
+  // Build new nodes
+  const rootId = 'r_' + Date.now();
+  const newNodes = [{id:rootId, parent_id:null, name, move_text:null, move:null, note}];
+  let parentId = rootId;
+  for (const mv of moves) {
+    const id = rootId + '_' + mv.num;
+    newNodes.push({id, parent_id:parentId, name:null, move_text:mv.move_text, move:mv.move, note:''});
+    parentId = id;
+  }
+
+  current.joseki = [...current.joseki, ...newNodes];
+
+  // Push to GitHub via API
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(current, null, 2))));
+  try {
+    // Get current SHA
+    const shaRes = await fetch('https://api.github.com/repos/nasu802/shogi-joseki/contents/data.json', {
+      headers:{'Authorization':'token ' + (window._ghToken||'')}
+    });
+    if (!shaRes.ok) throw new Error('GitHub認証が必要です');
+    const shaData = await shaRes.json();
+    const sha = shaData.sha;
+    const putRes = await fetch('https://api.github.com/repos/nasu802/shogi-joseki/contents/data.json', {
+      method:'PUT',
+      headers:{'Authorization':'token '+(window._ghToken||''),'Content-Type':'application/json'},
+      body:JSON.stringify({message:`feat: ${name} を追加`,content,sha})
+    });
+    if (!putRes.ok) throw new Error('GitHubへの保存に失敗しました');
+    alert(`「${name}」を追加しました（${moves.length}手）。ページを再読み込みしてください。`);
+    closeImport();
+  } catch(e) {
+    // GitHubトークンなしの場合: JSONをダウンロード
+    const blob = new Blob([JSON.stringify(current,null,2)], {type:'application/json'});
+    const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='data.json'; a.click();
+    alert(`data.json をダウンロードしました。GitHubリポジトリに手動でアップロードしてください。`);
+    closeImport();
+  }
 }
 
 async function init(){
