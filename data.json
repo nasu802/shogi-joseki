@@ -1,45 +1,9883 @@
 {
   "joseki": [
-    {"id":"root1","parent_id":null,"name":"対四間飛車棒銀","move_text":null,"move":null,"note":"四間飛車に対する棒銀急戦"},
-    {"id":"n1","parent_id":"root1","move_text":"7六歩","move":{"from":[6,6],"to":[5,6],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"n2","parent_id":"n1","move_text":"3四歩","move":{"from":[2,2],"to":[3,2],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"n3","parent_id":"n2","move_text":"2六歩","move":{"from":[6,1],"to":[5,1],"side":0,"piece":"FU","promote":false,"drop":false},"note":"飛車先を突く"},
-    {"id":"n4","parent_id":"n3","move_text":"4四歩","move":{"from":[2,3],"to":[3,3],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"n5","parent_id":"n4","move_text":"2五歩","move":{"from":[5,1],"to":[4,1],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"n6","parent_id":"n5","move_text":"3三角","move":{"from":[1,1],"to":[2,2],"side":1,"piece":"KA","promote":false,"drop":false},"note":"飛車先を受ける"},
-    {"id":"n7","parent_id":"n6","move_text":"4八銀","move":{"from":[8,2],"to":[7,3],"side":0,"piece":"GI","promote":false,"drop":false},"note":"棒銀の準備"},
-    {"id":"n8","parent_id":"n7","move_text":"4二飛","move":{"from":[1,7],"to":[1,3],"side":1,"piece":"HI","promote":false,"drop":false},"note":"四間飛車に振る"},
-    {"id":"n9","parent_id":"n8","move_text":"3八銀","move":{"from":[7,3],"to":[6,3],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
-    {"id":"n10","parent_id":"n9","move_text":"6二玉","move":{"from":[0,4],"to":[1,5],"side":1,"piece":"OU","promote":false,"drop":false},"note":"玉を囲いへ"},
-    {"id":"n11","parent_id":"n10","move_text":"2七銀","move":{"from":[6,3],"to":[5,2],"side":0,"piece":"GI","promote":false,"drop":false},"note":"棒銀始動"},
-    {"id":"n12","parent_id":"n11","move_text":"7二玉","move":{"from":[1,5],"to":[1,6],"side":1,"piece":"OU","promote":false,"drop":false},"note":""},
-    {"id":"n13","parent_id":"n12","move_text":"2六銀","move":{"from":[5,2],"to":[4,2],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
-    {"id":"n14","parent_id":"n13","move_text":"8二玉","move":{"from":[1,6],"to":[1,7],"side":1,"piece":"OU","promote":false,"drop":false},"note":"美濃囲いへ"},
-    {"id":"n15a","parent_id":"n14","move_text":"2四歩","move":{"from":[4,1],"to":[3,1],"side":0,"piece":"FU","promote":false,"drop":false},"note":"仕掛け！"},
-    {"id":"n15b","parent_id":"n14","move_text":"3六歩","move":{"from":[6,2],"to":[5,2],"side":0,"piece":"FU","promote":false,"drop":false},"note":"様子見"},
-    {"id":"n16a","parent_id":"n15a","move_text":"同　歩","move":{"from":[2,1],"to":[3,1],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"n17a","parent_id":"n16a","move_text":"同　銀","move":{"from":[4,2],"to":[3,1],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
-    {"id":"n18a","parent_id":"n17a","move_text":"2三銀","move":{"from":[1,2],"to":[2,2],"side":1,"piece":"GI","promote":false,"drop":false},"note":"銀で2四を守る"},
-    {"id":"n18b","parent_id":"n17a","move_text":"4三銀","move":{"from":[1,2],"to":[2,3],"side":1,"piece":"GI","promote":false,"drop":false},"note":"中央を厚くする"},
-
-    {"id":"root2","parent_id":null,"name":"対四間飛車右四間","move_text":null,"move":null,"note":"右四間飛車による急戦"},
-    {"id":"r2n1","parent_id":"root2","move_text":"7六歩","move":{"from":[6,6],"to":[5,6],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"r2n2","parent_id":"r2n1","move_text":"3四歩","move":{"from":[2,2],"to":[3,2],"side":1,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"r2n3","parent_id":"r2n2","move_text":"6六歩","move":{"from":[6,5],"to":[5,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":"角道を止める"},
-    {"id":"r2n4","parent_id":"r2n3","move_text":"4二飛","move":{"from":[1,7],"to":[1,3],"side":1,"piece":"HI","promote":false,"drop":false},"note":"四間飛車"},
-    {"id":"r2n5","parent_id":"r2n4","move_text":"6八銀","move":{"from":[8,6],"to":[7,6],"side":0,"piece":"GI","promote":false,"drop":false},"note":""},
-    {"id":"r2n6","parent_id":"r2n5","move_text":"6二玉","move":{"from":[0,4],"to":[1,5],"side":1,"piece":"OU","promote":false,"drop":false},"note":""},
-    {"id":"r2n7","parent_id":"r2n6","move_text":"5八金右","move":{"from":[8,3],"to":[7,4],"side":0,"piece":"KI","promote":false,"drop":false},"note":""},
-    {"id":"r2n8","parent_id":"r2n7","move_text":"7二玉","move":{"from":[1,5],"to":[1,6],"side":1,"piece":"OU","promote":false,"drop":false},"note":""},
-    {"id":"r2n9","parent_id":"r2n8","move_text":"6七金","move":{"from":[7,4],"to":[6,5],"side":0,"piece":"KI","promote":false,"drop":false},"note":""},
-    {"id":"r2n10","parent_id":"r2n9","move_text":"8二玉","move":{"from":[1,6],"to":[1,7],"side":1,"piece":"OU","promote":false,"drop":false},"note":"美濃完成"},
-    {"id":"r2n11","parent_id":"r2n10","move_text":"6八飛","move":{"from":[7,1],"to":[7,5],"side":0,"piece":"HI","promote":false,"drop":false},"note":"右四間飛車！"},
-    {"id":"r2n12a","parent_id":"r2n11","move_text":"4三銀","move":{"from":[1,2],"to":[2,3],"side":1,"piece":"GI","promote":false,"drop":false},"note":"銀で守る"},
-    {"id":"r2n12b","parent_id":"r2n11","move_text":"5二金左","move":{"from":[1,5],"to":[2,4],"side":1,"piece":"KI","promote":false,"drop":false},"note":"金で守る"},
-    {"id":"r2n13a","parent_id":"r2n12a","move_text":"6五歩","move":{"from":[5,5],"to":[4,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":"仕掛け！"},
-    {"id":"r2n14a","parent_id":"r2n13a","move_text":"6四歩","move":{"from":[2,5],"to":[3,5],"side":1,"piece":"FU","promote":false,"drop":false},"note":"歩で受ける"},
-    {"id":"r2n15a","parent_id":"r2n14a","move_text":"同　歩","move":{"from":[4,5],"to":[3,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":""},
-    {"id":"r2n16a","parent_id":"r2n15a","move_text":"同　銀","move":{"from":[2,3],"to":[3,5],"side":1,"piece":"GI","promote":false,"drop":false},"note":""},
-    {"id":"r2n17a","parent_id":"r2n16a","move_text":"6四歩","move":{"from":[6,5],"to":[5,5],"side":0,"piece":"FU","promote":false,"drop":false},"note":"歩を打つ"}
+    {
+      "id": "root1",
+      "parent_id": null,
+      "name": "２六歩系の定跡",
+      "move_text": null,
+      "move": null,
+      "note": "Floodgate 740局より自動生成（379局）"
+    },
+    {
+      "id": "n2",
+      "parent_id": "root1",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "379局"
+    },
+    {
+      "id": "n3",
+      "parent_id": "n2",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "217局"
+    },
+    {
+      "id": "n4",
+      "parent_id": "n3",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "159局"
+    },
+    {
+      "id": "n5",
+      "parent_id": "n4",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "108局"
+    },
+    {
+      "id": "n6",
+      "parent_id": "n5",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "51局"
+    },
+    {
+      "id": "n7",
+      "parent_id": "n6",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "48局"
+    },
+    {
+      "id": "n8",
+      "parent_id": "n7",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "47局"
+    },
+    {
+      "id": "n9",
+      "parent_id": "n8",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "47局"
+    },
+    {
+      "id": "n10",
+      "parent_id": "n9",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "32局"
+    },
+    {
+      "id": "n11",
+      "parent_id": "n10",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "27局"
+    },
+    {
+      "id": "n12",
+      "parent_id": "n11",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "27局"
+    },
+    {
+      "id": "n13",
+      "parent_id": "n12",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "27局"
+    },
+    {
+      "id": "n14",
+      "parent_id": "n13",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "24局"
+    },
+    {
+      "id": "n15",
+      "parent_id": "n14",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n16",
+      "parent_id": "n15",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n17",
+      "parent_id": "n16",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n18",
+      "parent_id": "n17",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n19",
+      "parent_id": "n18",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n20",
+      "parent_id": "n19",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n21",
+      "parent_id": "n14",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n22",
+      "parent_id": "n21",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n23",
+      "parent_id": "n22",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n24",
+      "parent_id": "n23",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n25",
+      "parent_id": "n24",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n26",
+      "parent_id": "n25",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n27",
+      "parent_id": "n26",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n28",
+      "parent_id": "n27",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n29",
+      "parent_id": "n28",
+      "name": null,
+      "move_text": "６四歩",
+      "move": {
+        "from": [
+          2,
+          5
+        ],
+        "to": [
+          3,
+          5
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n30",
+      "parent_id": "n29",
+      "name": null,
+      "move_text": "３七桂",
+      "move": {
+        "from": [
+          8,
+          1
+        ],
+        "to": [
+          6,
+          2
+        ],
+        "side": 0,
+        "piece": "KE",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n31",
+      "parent_id": "n30",
+      "name": null,
+      "move_text": "５二金",
+      "move": {
+        "from": [
+          0,
+          5
+        ],
+        "to": [
+          1,
+          4
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n32",
+      "parent_id": "n31",
+      "name": null,
+      "move_text": "４六歩",
+      "move": {
+        "from": [
+          6,
+          3
+        ],
+        "to": [
+          5,
+          3
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n33",
+      "parent_id": "n14",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n34",
+      "parent_id": "n33",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n35",
+      "parent_id": "n9",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n36",
+      "parent_id": "n35",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n37",
+      "parent_id": "n36",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n38",
+      "parent_id": "n37",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n39",
+      "parent_id": "n38",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n40",
+      "parent_id": "n39",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n41",
+      "parent_id": "n9",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n42",
+      "parent_id": "n41",
+      "name": null,
+      "move_text": "３三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n43",
+      "parent_id": "n42",
+      "name": null,
+      "move_text": "７八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n44",
+      "parent_id": "n5",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "47局"
+    },
+    {
+      "id": "n45",
+      "parent_id": "n44",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "43局"
+    },
+    {
+      "id": "n46",
+      "parent_id": "n45",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "31局"
+    },
+    {
+      "id": "n47",
+      "parent_id": "n46",
+      "name": null,
+      "move_text": "７二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "23局"
+    },
+    {
+      "id": "n48",
+      "parent_id": "n47",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "20局"
+    },
+    {
+      "id": "n49",
+      "parent_id": "n48",
+      "name": null,
+      "move_text": "５二玉",
+      "move": {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          4
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n50",
+      "parent_id": "n49",
+      "name": null,
+      "move_text": "５八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          4
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n51",
+      "parent_id": "n49",
+      "name": null,
+      "move_text": "４六歩",
+      "move": {
+        "from": [
+          6,
+          3
+        ],
+        "to": [
+          5,
+          3
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n52",
+      "parent_id": "n48",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n53",
+      "parent_id": "n52",
+      "name": null,
+      "move_text": "６八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n54",
+      "parent_id": "n46",
+      "name": null,
+      "move_text": "８六歩",
+      "move": {
+        "from": [
+          4,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n55",
+      "parent_id": "n54",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          6,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n56",
+      "parent_id": "n55",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n57",
+      "parent_id": "n56",
+      "name": null,
+      "move_text": "８七歩打",
+      "move": {
+        "from": null,
+        "to": [
+          6,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": true
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n58",
+      "parent_id": "n57",
+      "name": null,
+      "move_text": "８四飛",
+      "move": {
+        "from": [
+          5,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n59",
+      "parent_id": "n45",
+      "name": null,
+      "move_text": "５八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          4
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n60",
+      "parent_id": "n59",
+      "name": null,
+      "move_text": "８六歩",
+      "move": {
+        "from": [
+          4,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n61",
+      "parent_id": "n60",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          6,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n62",
+      "parent_id": "n61",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n63",
+      "parent_id": "n62",
+      "name": null,
+      "move_text": "８七歩打",
+      "move": {
+        "from": null,
+        "to": [
+          6,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": true
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n64",
+      "parent_id": "n63",
+      "name": null,
+      "move_text": "８四飛",
+      "move": {
+        "from": [
+          5,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n65",
+      "parent_id": "n64",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n66",
+      "parent_id": "n65",
+      "name": null,
+      "move_text": "７二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n67",
+      "parent_id": "n45",
+      "name": null,
+      "move_text": "２四歩",
+      "move": {
+        "from": [
+          4,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n68",
+      "parent_id": "n67",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          2,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n69",
+      "parent_id": "n68",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n70",
+      "parent_id": "n69",
+      "name": null,
+      "move_text": "２三歩打",
+      "move": {
+        "from": null,
+        "to": [
+          2,
+          1
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": true
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n71",
+      "parent_id": "n70",
+      "name": null,
+      "move_text": "２六飛",
+      "move": {
+        "from": [
+          3,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n72",
+      "parent_id": "n45",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n73",
+      "parent_id": "n44",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n74",
+      "parent_id": "n73",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n75",
+      "parent_id": "n5",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n76",
+      "parent_id": "n75",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n77",
+      "parent_id": "n76",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n78",
+      "parent_id": "n77",
+      "name": null,
+      "move_text": "７二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n79",
+      "parent_id": "n78",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n80",
+      "parent_id": "n4",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "50局"
+    },
+    {
+      "id": "n81",
+      "parent_id": "n80",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "35局"
+    },
+    {
+      "id": "n82",
+      "parent_id": "n81",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "31局"
+    },
+    {
+      "id": "n83",
+      "parent_id": "n82",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "30局"
+    },
+    {
+      "id": "n84",
+      "parent_id": "n83",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "30局"
+    },
+    {
+      "id": "n85",
+      "parent_id": "n84",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n86",
+      "parent_id": "n85",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n87",
+      "parent_id": "n86",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n88",
+      "parent_id": "n87",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n89",
+      "parent_id": "n88",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n90",
+      "parent_id": "n89",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "18局"
+    },
+    {
+      "id": "n91",
+      "parent_id": "n90",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "13局"
+    },
+    {
+      "id": "n92",
+      "parent_id": "n91",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "13局"
+    },
+    {
+      "id": "n93",
+      "parent_id": "n92",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "13局"
+    },
+    {
+      "id": "n94",
+      "parent_id": "n93",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n95",
+      "parent_id": "n94",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n96",
+      "parent_id": "n95",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n97",
+      "parent_id": "n96",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n98",
+      "parent_id": "n97",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n99",
+      "parent_id": "n98",
+      "name": null,
+      "move_text": "４六歩",
+      "move": {
+        "from": [
+          6,
+          3
+        ],
+        "to": [
+          5,
+          3
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n100",
+      "parent_id": "n95",
+      "name": null,
+      "move_text": "６四歩",
+      "move": {
+        "from": [
+          2,
+          5
+        ],
+        "to": [
+          3,
+          5
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n101",
+      "parent_id": "n90",
+      "name": null,
+      "move_text": "４六歩",
+      "move": {
+        "from": [
+          6,
+          3
+        ],
+        "to": [
+          5,
+          3
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n102",
+      "parent_id": "n101",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n103",
+      "parent_id": "n102",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n104",
+      "parent_id": "n103",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n105",
+      "parent_id": "n104",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n106",
+      "parent_id": "n105",
+      "name": null,
+      "move_text": "４二玉",
+      "move": {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          3
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n107",
+      "parent_id": "n84",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n108",
+      "parent_id": "n107",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n109",
+      "parent_id": "n108",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n110",
+      "parent_id": "n109",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n111",
+      "parent_id": "n110",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n112",
+      "parent_id": "n111",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n113",
+      "parent_id": "n112",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n114",
+      "parent_id": "n113",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n115",
+      "parent_id": "n114",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n116",
+      "parent_id": "n115",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n117",
+      "parent_id": "n116",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n118",
+      "parent_id": "n117",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n119",
+      "parent_id": "n118",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n120",
+      "parent_id": "n119",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n121",
+      "parent_id": "n120",
+      "name": null,
+      "move_text": "３七銀",
+      "move": {
+        "from": [
+          7,
+          2
+        ],
+        "to": [
+          6,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n122",
+      "parent_id": "n121",
+      "name": null,
+      "move_text": "７三銀",
+      "move": {
+        "from": [
+          1,
+          5
+        ],
+        "to": [
+          2,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n123",
+      "parent_id": "n122",
+      "name": null,
+      "move_text": "４六銀",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n124",
+      "parent_id": "n81",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n125",
+      "parent_id": "n80",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n126",
+      "parent_id": "n125",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n127",
+      "parent_id": "n126",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n128",
+      "parent_id": "n127",
+      "name": null,
+      "move_text": "７二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n129",
+      "parent_id": "n128",
+      "name": null,
+      "move_text": "５八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          4
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n130",
+      "parent_id": "n129",
+      "name": null,
+      "move_text": "８六歩",
+      "move": {
+        "from": [
+          4,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n131",
+      "parent_id": "n130",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          6,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n132",
+      "parent_id": "n131",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n133",
+      "parent_id": "n132",
+      "name": null,
+      "move_text": "８七歩打",
+      "move": {
+        "from": null,
+        "to": [
+          6,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": true
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n134",
+      "parent_id": "n133",
+      "name": null,
+      "move_text": "８四飛",
+      "move": {
+        "from": [
+          5,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n135",
+      "parent_id": "n134",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n136",
+      "parent_id": "n128",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n137",
+      "parent_id": "n80",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n138",
+      "parent_id": "n137",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n139",
+      "parent_id": "n80",
+      "name": null,
+      "move_text": "５八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          4
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n140",
+      "parent_id": "n3",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "38局"
+    },
+    {
+      "id": "n141",
+      "parent_id": "n140",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "23局"
+    },
+    {
+      "id": "n142",
+      "parent_id": "n141",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "14局"
+    },
+    {
+      "id": "n143",
+      "parent_id": "n142",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n144",
+      "parent_id": "n143",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n145",
+      "parent_id": "n144",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n146",
+      "parent_id": "n145",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n147",
+      "parent_id": "n146",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n148",
+      "parent_id": "n144",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n149",
+      "parent_id": "n148",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n150",
+      "parent_id": "n143",
+      "name": null,
+      "move_text": "７八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n151",
+      "parent_id": "n150",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n152",
+      "parent_id": "n141",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n153",
+      "parent_id": "n152",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n154",
+      "parent_id": "n153",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n155",
+      "parent_id": "n154",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n156",
+      "parent_id": "n155",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n157",
+      "parent_id": "n156",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n158",
+      "parent_id": "n157",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n159",
+      "parent_id": "n158",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n160",
+      "parent_id": "n140",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n161",
+      "parent_id": "n160",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n162",
+      "parent_id": "n161",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n163",
+      "parent_id": "n162",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n164",
+      "parent_id": "n163",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n165",
+      "parent_id": "n164",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n166",
+      "parent_id": "n140",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n167",
+      "parent_id": "n3",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "16局"
+    },
+    {
+      "id": "n168",
+      "parent_id": "n167",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n169",
+      "parent_id": "n168",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n170",
+      "parent_id": "n169",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n171",
+      "parent_id": "n170",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n172",
+      "parent_id": "n171",
+      "name": null,
+      "move_text": "７二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n173",
+      "parent_id": "n172",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n174",
+      "parent_id": "n170",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n175",
+      "parent_id": "n167",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n176",
+      "parent_id": "n175",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n177",
+      "parent_id": "n176",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n178",
+      "parent_id": "n3",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n179",
+      "parent_id": "n178",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n180",
+      "parent_id": "n2",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "75局"
+    },
+    {
+      "id": "n181",
+      "parent_id": "n180",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "52局"
+    },
+    {
+      "id": "n182",
+      "parent_id": "n181",
+      "name": null,
+      "move_text": "４四歩",
+      "move": {
+        "from": [
+          2,
+          3
+        ],
+        "to": [
+          3,
+          3
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "23局"
+    },
+    {
+      "id": "n183",
+      "parent_id": "n182",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "13局"
+    },
+    {
+      "id": "n184",
+      "parent_id": "n183",
+      "name": null,
+      "move_text": "３三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "13局"
+    },
+    {
+      "id": "n185",
+      "parent_id": "n184",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n186",
+      "parent_id": "n184",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n187",
+      "parent_id": "n182",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n188",
+      "parent_id": "n187",
+      "name": null,
+      "move_text": "３三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n189",
+      "parent_id": "n181",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n190",
+      "parent_id": "n189",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n191",
+      "parent_id": "n190",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n192",
+      "parent_id": "n191",
+      "name": null,
+      "move_text": "２四歩",
+      "move": {
+        "from": [
+          4,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n193",
+      "parent_id": "n192",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          2,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n194",
+      "parent_id": "n193",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n195",
+      "parent_id": "n190",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n196",
+      "parent_id": "n189",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n197",
+      "parent_id": "n196",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n198",
+      "parent_id": "n197",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n199",
+      "parent_id": "n181",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n200",
+      "parent_id": "n199",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n201",
+      "parent_id": "n200",
+      "name": null,
+      "move_text": "４二飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          1,
+          3
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n202",
+      "parent_id": "n201",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n203",
+      "parent_id": "n202",
+      "name": null,
+      "move_text": "６二玉",
+      "move": {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n204",
+      "parent_id": "n203",
+      "name": null,
+      "move_text": "６八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n205",
+      "parent_id": "n181",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n206",
+      "parent_id": "n205",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n207",
+      "parent_id": "n180",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "16局"
+    },
+    {
+      "id": "n208",
+      "parent_id": "n207",
+      "name": null,
+      "move_text": "３三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n209",
+      "parent_id": "n208",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n210",
+      "parent_id": "n209",
+      "name": null,
+      "move_text": "４四歩",
+      "move": {
+        "from": [
+          2,
+          3
+        ],
+        "to": [
+          3,
+          3
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n211",
+      "parent_id": "n208",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n212",
+      "parent_id": "n180",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n213",
+      "parent_id": "n2",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "35局"
+    },
+    {
+      "id": "n214",
+      "parent_id": "n213",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "25局"
+    },
+    {
+      "id": "n215",
+      "parent_id": "n214",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "20局"
+    },
+    {
+      "id": "n216",
+      "parent_id": "n215",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "14局"
+    },
+    {
+      "id": "n217",
+      "parent_id": "n216",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n218",
+      "parent_id": "n217",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n219",
+      "parent_id": "n218",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n220",
+      "parent_id": "n219",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n221",
+      "parent_id": "n220",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n222",
+      "parent_id": "n221",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n223",
+      "parent_id": "n222",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n224",
+      "parent_id": "n223",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n225",
+      "parent_id": "n224",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n226",
+      "parent_id": "n225",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n227",
+      "parent_id": "n220",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n228",
+      "parent_id": "n227",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n229",
+      "parent_id": "n228",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n230",
+      "parent_id": "n229",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n231",
+      "parent_id": "n230",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n232",
+      "parent_id": "n219",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n233",
+      "parent_id": "n215",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n234",
+      "parent_id": "n233",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n235",
+      "parent_id": "n213",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n236",
+      "parent_id": "n235",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n237",
+      "parent_id": "n2",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n238",
+      "parent_id": "n237",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n239",
+      "parent_id": "n238",
+      "name": null,
+      "move_text": "１三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          0
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n240",
+      "parent_id": "n237",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n241",
+      "parent_id": "n2",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n242",
+      "parent_id": "n241",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n243",
+      "parent_id": "n242",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n244",
+      "parent_id": "n243",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n245",
+      "parent_id": "n244",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n246",
+      "parent_id": "n243",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n247",
+      "parent_id": "n246",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n248",
+      "parent_id": "n247",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n249",
+      "parent_id": "n248",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n250",
+      "parent_id": "n249",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n251",
+      "parent_id": "n250",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n252",
+      "parent_id": "n251",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n253",
+      "parent_id": "n252",
+      "name": null,
+      "move_text": "６四歩",
+      "move": {
+        "from": [
+          2,
+          5
+        ],
+        "to": [
+          3,
+          5
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n254",
+      "parent_id": "n253",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n255",
+      "parent_id": "n254",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n256",
+      "parent_id": "n255",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n257",
+      "parent_id": "n256",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n258",
+      "parent_id": "n257",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n259",
+      "parent_id": "n258",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n260",
+      "parent_id": "n259",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n261",
+      "parent_id": "n260",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n262",
+      "parent_id": "n261",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n263",
+      "parent_id": "n262",
+      "name": null,
+      "move_text": "７二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          6
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n264",
+      "parent_id": "n263",
+      "name": null,
+      "move_text": "３七桂",
+      "move": {
+        "from": [
+          8,
+          1
+        ],
+        "to": [
+          6,
+          2
+        ],
+        "side": 0,
+        "piece": "KE",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n265",
+      "parent_id": "n264",
+      "name": null,
+      "move_text": "６三銀",
+      "move": {
+        "from": [
+          1,
+          6
+        ],
+        "to": [
+          2,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n266",
+      "parent_id": "n241",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n267",
+      "parent_id": "n266",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n268",
+      "parent_id": "n2",
+      "name": null,
+      "move_text": "５二金",
+      "move": {
+        "from": [
+          0,
+          5
+        ],
+        "to": [
+          1,
+          4
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n269",
+      "parent_id": "n268",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "root270",
+      "parent_id": null,
+      "name": "７六歩系の定跡",
+      "move_text": null,
+      "move": null,
+      "note": "Floodgate 740局より自動生成（240局）"
+    },
+    {
+      "id": "n271",
+      "parent_id": "root270",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "240局"
+    },
+    {
+      "id": "n272",
+      "parent_id": "n271",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "120局"
+    },
+    {
+      "id": "n273",
+      "parent_id": "n272",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "55局"
+    },
+    {
+      "id": "n274",
+      "parent_id": "n273",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "30局"
+    },
+    {
+      "id": "n275",
+      "parent_id": "n274",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "20局"
+    },
+    {
+      "id": "n276",
+      "parent_id": "n275",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "14局"
+    },
+    {
+      "id": "n277",
+      "parent_id": "n276",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n278",
+      "parent_id": "n277",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n279",
+      "parent_id": "n278",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n280",
+      "parent_id": "n279",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n281",
+      "parent_id": "n280",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n282",
+      "parent_id": "n281",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n283",
+      "parent_id": "n282",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n284",
+      "parent_id": "n283",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n285",
+      "parent_id": "n284",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n286",
+      "parent_id": "n285",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n287",
+      "parent_id": "n275",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n288",
+      "parent_id": "n274",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n289",
+      "parent_id": "n288",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n290",
+      "parent_id": "n289",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n291",
+      "parent_id": "n290",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n292",
+      "parent_id": "n291",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n293",
+      "parent_id": "n292",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n294",
+      "parent_id": "n293",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n295",
+      "parent_id": "n294",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n296",
+      "parent_id": "n273",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "21局"
+    },
+    {
+      "id": "n297",
+      "parent_id": "n296",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n298",
+      "parent_id": "n297",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n299",
+      "parent_id": "n298",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n300",
+      "parent_id": "n299",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n301",
+      "parent_id": "n300",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n302",
+      "parent_id": "n301",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n303",
+      "parent_id": "n302",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n304",
+      "parent_id": "n303",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n305",
+      "parent_id": "n304",
+      "name": null,
+      "move_text": "３八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n306",
+      "parent_id": "n305",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n307",
+      "parent_id": "n306",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n308",
+      "parent_id": "n304",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n309",
+      "parent_id": "n308",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n310",
+      "parent_id": "n300",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n311",
+      "parent_id": "n310",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n312",
+      "parent_id": "n311",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n313",
+      "parent_id": "n312",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n314",
+      "parent_id": "n313",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n315",
+      "parent_id": "n314",
+      "name": null,
+      "move_text": "３三銀",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n316",
+      "parent_id": "n296",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n317",
+      "parent_id": "n316",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n318",
+      "parent_id": "n317",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n319",
+      "parent_id": "n318",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n320",
+      "parent_id": "n319",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n321",
+      "parent_id": "n272",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "25局"
+    },
+    {
+      "id": "n322",
+      "parent_id": "n321",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n323",
+      "parent_id": "n322",
+      "name": null,
+      "move_text": "７七銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "14局"
+    },
+    {
+      "id": "n324",
+      "parent_id": "n323",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n325",
+      "parent_id": "n324",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n326",
+      "parent_id": "n323",
+      "name": null,
+      "move_text": "４二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          3
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n327",
+      "parent_id": "n322",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n328",
+      "parent_id": "n327",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n329",
+      "parent_id": "n328",
+      "name": null,
+      "move_text": "７七銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n330",
+      "parent_id": "n329",
+      "name": null,
+      "move_text": "６四歩",
+      "move": {
+        "from": [
+          2,
+          5
+        ],
+        "to": [
+          3,
+          5
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n331",
+      "parent_id": "n321",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n332",
+      "parent_id": "n272",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "14局"
+    },
+    {
+      "id": "n333",
+      "parent_id": "n332",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n334",
+      "parent_id": "n333",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n335",
+      "parent_id": "n334",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n336",
+      "parent_id": "n335",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n337",
+      "parent_id": "n332",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n338",
+      "parent_id": "n337",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n339",
+      "parent_id": "n338",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n340",
+      "parent_id": "n339",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n341",
+      "parent_id": "n340",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n342",
+      "parent_id": "n341",
+      "name": null,
+      "move_text": "６八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n343",
+      "parent_id": "n342",
+      "name": null,
+      "move_text": "７七馬成",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n344",
+      "parent_id": "n343",
+      "name": null,
+      "move_text": "同　銀",
+      "move": {
+        "from": [
+          7,
+          5
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n345",
+      "parent_id": "n344",
+      "name": null,
+      "move_text": "２二銀",
+      "move": {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n346",
+      "parent_id": "n272",
+      "name": null,
+      "move_text": "７八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n347",
+      "parent_id": "n346",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n348",
+      "parent_id": "n347",
+      "name": null,
+      "move_text": "７七銀",
+      "move": {
+        "from": [
+          7,
+          6
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n349",
+      "parent_id": "n348",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n350",
+      "parent_id": "n272",
+      "name": null,
+      "move_text": "５六歩",
+      "move": {
+        "from": [
+          6,
+          4
+        ],
+        "to": [
+          5,
+          4
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n351",
+      "parent_id": "n350",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n352",
+      "parent_id": "n351",
+      "name": null,
+      "move_text": "５五歩",
+      "move": {
+        "from": [
+          5,
+          4
+        ],
+        "to": [
+          4,
+          4
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n353",
+      "parent_id": "n272",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n354",
+      "parent_id": "n271",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "72局"
+    },
+    {
+      "id": "n355",
+      "parent_id": "n354",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "48局"
+    },
+    {
+      "id": "n356",
+      "parent_id": "n355",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n357",
+      "parent_id": "n356",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n358",
+      "parent_id": "n357",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "16局"
+    },
+    {
+      "id": "n359",
+      "parent_id": "n358",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "14局"
+    },
+    {
+      "id": "n360",
+      "parent_id": "n359",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n361",
+      "parent_id": "n360",
+      "name": null,
+      "move_text": "２四歩",
+      "move": {
+        "from": [
+          4,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n362",
+      "parent_id": "n361",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          2,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n363",
+      "parent_id": "n362",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n364",
+      "parent_id": "n363",
+      "name": null,
+      "move_text": "８六歩",
+      "move": {
+        "from": [
+          4,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n365",
+      "parent_id": "n364",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          6,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n366",
+      "parent_id": "n365",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n367",
+      "parent_id": "n366",
+      "name": null,
+      "move_text": "３四飛",
+      "move": {
+        "from": [
+          3,
+          1
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n368",
+      "parent_id": "n367",
+      "name": null,
+      "move_text": "３三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n369",
+      "parent_id": "n368",
+      "name": null,
+      "move_text": "５八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          4
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n370",
+      "parent_id": "n369",
+      "name": null,
+      "move_text": "５二玉",
+      "move": {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          4
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n371",
+      "parent_id": "n370",
+      "name": null,
+      "move_text": "３六歩",
+      "move": {
+        "from": [
+          6,
+          2
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n372",
+      "parent_id": "n371",
+      "name": null,
+      "move_text": "７六飛",
+      "move": {
+        "from": [
+          5,
+          7
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n373",
+      "parent_id": "n372",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n374",
+      "parent_id": "n373",
+      "name": null,
+      "move_text": "同　馬成",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": true,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n375",
+      "parent_id": "n374",
+      "name": null,
+      "move_text": "同　桂",
+      "move": {
+        "from": [
+          8,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KE",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n376",
+      "parent_id": "n375",
+      "name": null,
+      "move_text": "５五角打",
+      "move": {
+        "from": null,
+        "to": [
+          4,
+          4
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": true
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n377",
+      "parent_id": "n376",
+      "name": null,
+      "move_text": "２二歩打",
+      "move": {
+        "from": null,
+        "to": [
+          1,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": true
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n378",
+      "parent_id": "n359",
+      "name": null,
+      "move_text": "８六歩",
+      "move": {
+        "from": [
+          4,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n379",
+      "parent_id": "n378",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          6,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n380",
+      "parent_id": "n379",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          5,
+          7
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n381",
+      "parent_id": "n380",
+      "name": null,
+      "move_text": "２四歩",
+      "move": {
+        "from": [
+          4,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n382",
+      "parent_id": "n381",
+      "name": null,
+      "move_text": "同　歩",
+      "move": {
+        "from": [
+          2,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n383",
+      "parent_id": "n382",
+      "name": null,
+      "move_text": "同　飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n384",
+      "parent_id": "n355",
+      "name": null,
+      "move_text": "４四歩",
+      "move": {
+        "from": [
+          2,
+          3
+        ],
+        "to": [
+          3,
+          3
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "19局"
+    },
+    {
+      "id": "n385",
+      "parent_id": "n384",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n386",
+      "parent_id": "n385",
+      "name": null,
+      "move_text": "３二飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n387",
+      "parent_id": "n385",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n388",
+      "parent_id": "n384",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n389",
+      "parent_id": "n388",
+      "name": null,
+      "move_text": "３三角",
+      "move": {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "side": 1,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n390",
+      "parent_id": "n355",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n391",
+      "parent_id": "n390",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n392",
+      "parent_id": "n391",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n393",
+      "parent_id": "n354",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n394",
+      "parent_id": "n393",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n395",
+      "parent_id": "n394",
+      "name": null,
+      "move_text": "６八飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n396",
+      "parent_id": "n395",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n397",
+      "parent_id": "n396",
+      "name": null,
+      "move_text": "４八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n398",
+      "parent_id": "n397",
+      "name": null,
+      "move_text": "４二玉",
+      "move": {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          3
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n399",
+      "parent_id": "n398",
+      "name": null,
+      "move_text": "３八玉",
+      "move": {
+        "from": [
+          7,
+          3
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n400",
+      "parent_id": "n399",
+      "name": null,
+      "move_text": "３二玉",
+      "move": {
+        "from": [
+          1,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n401",
+      "parent_id": "n354",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n402",
+      "parent_id": "n354",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n403",
+      "parent_id": "n271",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "20局"
+    },
+    {
+      "id": "n404",
+      "parent_id": "n403",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n405",
+      "parent_id": "n404",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n406",
+      "parent_id": "n405",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n407",
+      "parent_id": "n406",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n408",
+      "parent_id": "n407",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n409",
+      "parent_id": "n408",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n410",
+      "parent_id": "n409",
+      "name": null,
+      "move_text": "８八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          7
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n411",
+      "parent_id": "n404",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n412",
+      "parent_id": "n411",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n413",
+      "parent_id": "n403",
+      "name": null,
+      "move_text": "５六歩",
+      "move": {
+        "from": [
+          6,
+          4
+        ],
+        "to": [
+          5,
+          4
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n414",
+      "parent_id": "n271",
+      "name": null,
+      "move_text": "９四歩",
+      "move": {
+        "from": [
+          2,
+          8
+        ],
+        "to": [
+          3,
+          8
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n415",
+      "parent_id": "n414",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n416",
+      "parent_id": "n415",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n417",
+      "parent_id": "n414",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n418",
+      "parent_id": "n417",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n419",
+      "parent_id": "n418",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n420",
+      "parent_id": "n419",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n421",
+      "parent_id": "n420",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n422",
+      "parent_id": "n421",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n423",
+      "parent_id": "n422",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n424",
+      "parent_id": "n423",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n425",
+      "parent_id": "n424",
+      "name": null,
+      "move_text": "７八銀",
+      "move": {
+        "from": [
+          8,
+          6
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n426",
+      "parent_id": "n425",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n427",
+      "parent_id": "n426",
+      "name": null,
+      "move_text": "６八飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          7,
+          5
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n428",
+      "parent_id": "n427",
+      "name": null,
+      "move_text": "１四歩",
+      "move": {
+        "from": [
+          2,
+          0
+        ],
+        "to": [
+          3,
+          0
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n429",
+      "parent_id": "n428",
+      "name": null,
+      "move_text": "４八玉",
+      "move": {
+        "from": [
+          8,
+          4
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n430",
+      "parent_id": "n429",
+      "name": null,
+      "move_text": "４二玉",
+      "move": {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          3
+        ],
+        "side": 1,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n431",
+      "parent_id": "n430",
+      "name": null,
+      "move_text": "３八玉",
+      "move": {
+        "from": [
+          7,
+          3
+        ],
+        "to": [
+          7,
+          2
+        ],
+        "side": 0,
+        "piece": "OU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n432",
+      "parent_id": "n271",
+      "name": null,
+      "move_text": "６二銀",
+      "move": {
+        "from": [
+          0,
+          6
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n433",
+      "parent_id": "n271",
+      "name": null,
+      "move_text": "６二飛",
+      "move": {
+        "from": [
+          1,
+          7
+        ],
+        "to": [
+          1,
+          5
+        ],
+        "side": 1,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "root434",
+      "parent_id": null,
+      "name": "７八金系の定跡",
+      "move_text": null,
+      "move": null,
+      "note": "Floodgate 740局より自動生成（37局）"
+    },
+    {
+      "id": "n435",
+      "parent_id": "root434",
+      "name": null,
+      "move_text": "７八金",
+      "move": {
+        "from": [
+          8,
+          5
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "37局"
+    },
+    {
+      "id": "n436",
+      "parent_id": "n435",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "18局"
+    },
+    {
+      "id": "n437",
+      "parent_id": "n436",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "9局"
+    },
+    {
+      "id": "n438",
+      "parent_id": "n437",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n439",
+      "parent_id": "n438",
+      "name": null,
+      "move_text": "２五歩",
+      "move": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n440",
+      "parent_id": "n439",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n441",
+      "parent_id": "n438",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n442",
+      "parent_id": "n436",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n443",
+      "parent_id": "n442",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n444",
+      "parent_id": "n443",
+      "name": null,
+      "move_text": "７七金",
+      "move": {
+        "from": [
+          7,
+          6
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n445",
+      "parent_id": "n444",
+      "name": null,
+      "move_text": "７四歩",
+      "move": {
+        "from": [
+          2,
+          6
+        ],
+        "to": [
+          3,
+          6
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n446",
+      "parent_id": "n445",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n447",
+      "parent_id": "n435",
+      "name": null,
+      "move_text": "３二金",
+      "move": {
+        "from": [
+          0,
+          3
+        ],
+        "to": [
+          1,
+          2
+        ],
+        "side": 1,
+        "piece": "KI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n448",
+      "parent_id": "n447",
+      "name": null,
+      "move_text": "４八銀",
+      "move": {
+        "from": [
+          8,
+          2
+        ],
+        "to": [
+          7,
+          3
+        ],
+        "side": 0,
+        "piece": "GI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n449",
+      "parent_id": "n448",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n450",
+      "parent_id": "n449",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n451",
+      "parent_id": "n435",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "root452",
+      "parent_id": null,
+      "name": "９六歩系の定跡",
+      "move_text": null,
+      "move": null,
+      "note": "Floodgate 740局より自動生成（18局）"
+    },
+    {
+      "id": "n453",
+      "parent_id": "root452",
+      "name": null,
+      "move_text": "９六歩",
+      "move": {
+        "from": [
+          6,
+          8
+        ],
+        "to": [
+          5,
+          8
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "18局"
+    },
+    {
+      "id": "n454",
+      "parent_id": "n453",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n455",
+      "parent_id": "n454",
+      "name": null,
+      "move_text": "２六歩",
+      "move": {
+        "from": [
+          6,
+          1
+        ],
+        "to": [
+          5,
+          1
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n456",
+      "parent_id": "n453",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "root457",
+      "parent_id": null,
+      "name": "１六歩系の定跡",
+      "move_text": null,
+      "move": null,
+      "note": "Floodgate 740局より自動生成（17局）"
+    },
+    {
+      "id": "n458",
+      "parent_id": "root457",
+      "name": null,
+      "move_text": "１六歩",
+      "move": {
+        "from": [
+          6,
+          0
+        ],
+        "to": [
+          5,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "17局"
+    },
+    {
+      "id": "n459",
+      "parent_id": "n458",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "11局"
+    },
+    {
+      "id": "n460",
+      "parent_id": "n459",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "10局"
+    },
+    {
+      "id": "n461",
+      "parent_id": "n460",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "8局"
+    },
+    {
+      "id": "n462",
+      "parent_id": "n461",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "4局"
+    },
+    {
+      "id": "n463",
+      "parent_id": "n462",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n464",
+      "parent_id": "n463",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n465",
+      "parent_id": "n461",
+      "name": null,
+      "move_text": "１五歩",
+      "move": {
+        "from": [
+          5,
+          0
+        ],
+        "to": [
+          4,
+          0
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n466",
+      "parent_id": "n465",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n467",
+      "parent_id": "n458",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "root468",
+      "parent_id": null,
+      "name": "７八飛系の定跡",
+      "move_text": null,
+      "move": null,
+      "note": "Floodgate 740局より自動生成（12局）"
+    },
+    {
+      "id": "n469",
+      "parent_id": "root468",
+      "name": null,
+      "move_text": "７八飛",
+      "move": {
+        "from": [
+          7,
+          1
+        ],
+        "to": [
+          7,
+          6
+        ],
+        "side": 0,
+        "piece": "HI",
+        "promote": false,
+        "drop": false
+      },
+      "note": "12局"
+    },
+    {
+      "id": "n470",
+      "parent_id": "n469",
+      "name": null,
+      "move_text": "８四歩",
+      "move": {
+        "from": [
+          2,
+          7
+        ],
+        "to": [
+          3,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n471",
+      "parent_id": "n470",
+      "name": null,
+      "move_text": "７六歩",
+      "move": {
+        "from": [
+          6,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "7局"
+    },
+    {
+      "id": "n472",
+      "parent_id": "n471",
+      "name": null,
+      "move_text": "８五歩",
+      "move": {
+        "from": [
+          3,
+          7
+        ],
+        "to": [
+          4,
+          7
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "6局"
+    },
+    {
+      "id": "n473",
+      "parent_id": "n472",
+      "name": null,
+      "move_text": "７七角",
+      "move": {
+        "from": [
+          7,
+          7
+        ],
+        "to": [
+          6,
+          6
+        ],
+        "side": 0,
+        "piece": "KA",
+        "promote": false,
+        "drop": false
+      },
+      "note": "5局"
+    },
+    {
+      "id": "n474",
+      "parent_id": "n473",
+      "name": null,
+      "move_text": "３四歩",
+      "move": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ],
+        "side": 1,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    },
+    {
+      "id": "n475",
+      "parent_id": "n474",
+      "name": null,
+      "move_text": "６六歩",
+      "move": {
+        "from": [
+          6,
+          5
+        ],
+        "to": [
+          5,
+          5
+        ],
+        "side": 0,
+        "piece": "FU",
+        "promote": false,
+        "drop": false
+      },
+      "note": "3局"
+    }
   ]
 }
