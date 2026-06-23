@@ -6,355 +6,312 @@
 <title>将棋定跡ツリー</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;background:#f5f0e8;color:#222;min-height:100vh}
-header{background:#2c1810;color:#f0d090;padding:12px 16px;font-size:18px;font-weight:bold;display:flex;align-items:center;gap:12px}
-header span{font-size:13px;opacity:.7;font-weight:normal}
+body{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;background:#0e0b07;color:#e8d5a8;min-height:100vh}
 
-#app{display:flex;gap:16px;padding:16px;max-width:1100px;margin:0 auto;flex-wrap:wrap}
+header{background:linear-gradient(135deg,#1e1208,#2c1a0a);padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:2px solid #8b5c1a}
+header h1{font-size:18px;color:#d4a850;font-weight:bold;letter-spacing:.08em}
+header .sub{font-size:12px;color:#8b7040;letter-spacing:.05em}
 
-/* Board */
-#board-wrap{flex-shrink:0}
-.col-labels{display:flex;padding-left:22px;margin-bottom:2px}
-.col-label{width:52px;text-align:center;font-size:12px;color:#666}
-.board-row{display:flex}
-.row-label{width:20px;height:52px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#666}
-#board{border:2px solid #6b4c2a;display:grid;grid-template-columns:repeat(9,52px);grid-template-rows:repeat(9,52px);background:#dcbb6b}
-.cell{border:1px solid #8b6040;display:flex;align-items:center;justify-content:center;cursor:default;font-size:20px;font-weight:bold;position:relative}
-.cell.last-move{background:rgba(80,180,80,.4)}
-.piece-sente{color:#1a0000}
-.piece-gote{color:#1a1a7a;transform:rotate(180deg);display:inline-block}
-.piece-promo{color:#cc2200!important}
+#app{display:flex;gap:0;height:calc(100vh - 53px)}
 
-/* Tree panel */
-#tree-wrap{flex:1;min-width:260px;max-width:500px}
-.panel-title{font-size:15px;font-weight:bold;color:#2c1810;padding-bottom:8px;border-bottom:2px solid #8b6040;margin-bottom:12px}
-.back-btn{font-size:13px;padding:4px 10px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;margin-bottom:12px;display:inline-block}
-.back-btn:hover{background:#f0e8d0}
-.joseki-card{padding:10px 14px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;margin-bottom:6px;font-size:14px;font-weight:bold}
-.joseki-card:hover{background:#f0e8d0}
-.joseki-card.active{background:#2c1810;color:#f0d090;border-color:#2c1810}
-.joseki-card .sub{font-size:11px;font-weight:normal;opacity:.7;margin-top:2px}
+/* Left panel */
+#left{flex-shrink:0;padding:20px;display:flex;flex-direction:column;align-items:center;gap:12px;background:#0e0b07;border-right:1px solid #2a1a08}
 
-/* Move tree */
-.tree-line{display:flex;align-items:flex-start;margin:2px 0}
-.move-btn{padding:3px 10px;border-radius:4px;border:1px solid #ccc;background:#fff;cursor:pointer;font-size:13px;display:inline-block;white-space:nowrap}
-.move-btn:hover{background:#f0e8d0}
-.move-btn.active{background:#2c1810;color:#fff;border-color:#2c1810}
-.move-btn.s0{border-left:3px solid #c04000}
-.move-btn.s1{border-left:3px solid #2244aa}
-.children{margin-left:16px;padding-left:8px;border-left:2px solid #ddd}
-.branch-sep{font-size:11px;color:#888;padding:4px 0;margin-left:4px}
-.note-tip{font-size:11px;color:#888;margin-left:6px;align-self:center}
-.step-controls{display:flex;gap:8px;margin-top:12px}
-.step-btn{padding:6px 16px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;font-size:14px}
-.step-btn:hover{background:#f0e8d0}
-.step-btn:disabled{opacity:.3;cursor:default}
-.move-path{font-size:12px;color:#888;margin-bottom:8px;line-height:1.8}
-#no-data{color:#888;padding:20px;text-align:center}
+/* Move history */
+#move-history{font-size:11px;color:#8b7040;text-align:center;min-height:18px;letter-spacing:.04em;max-width:500px;line-height:1.6}
+
+/* Board wrapper */
+.board-outer{position:relative}
+.col-labels{display:flex;padding-left:22px}
+.col-label{width:52px;text-align:center;font-size:11px;color:#6b5030;font-weight:bold}
+.board-main{display:flex}
+.row-labels{display:flex;flex-direction:column;padding-top:0}
+.row-label{height:52px;width:20px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#6b5030;font-weight:bold}
+
+#board{
+  border:3px solid #5a3010;
+  display:grid;
+  grid-template-columns:repeat(9,52px);
+  grid-template-rows:repeat(9,52px);
+  background:#c8921e;
+  background-image:
+    linear-gradient(rgba(0,0,0,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.08) 1px,transparent 1px);
+  background-size:52px 52px;
+  box-shadow:0 4px 24px rgba(0,0,0,.8), inset 0 0 0 1px rgba(255,200,80,.1);
+}
+
+.cell{
+  border:1px solid rgba(80,40,10,.5);
+  display:flex;align-items:center;justify-content:center;
+  font-size:21px;font-weight:bold;cursor:pointer;
+  transition:background .1s;
+  position:relative;
+}
+.cell:hover{background:rgba(255,220,80,.15)}
+.cell.last-move{background:rgba(80,200,80,.25)!important;box-shadow:inset 0 0 0 2px rgba(80,200,80,.5)}
+
+.piece-s{color:#1a0800;text-shadow:0 1px 0 rgba(255,200,100,.3)}
+.piece-g{color:#06082a;transform:rotate(180deg);display:inline-block;text-shadow:0 1px 0 rgba(200,220,255,.3)}
+.piece-promo{color:#bb1100!important}
+
+/* Right panel */
+#right{flex:1;overflow-y:auto;background:#130f08;display:flex;flex-direction:column}
+#right::-webkit-scrollbar{width:4px}
+#right::-webkit-scrollbar-track{background:#0e0b07}
+#right::-webkit-scrollbar-thumb{background:#3a2510;border-radius:2px}
+
+#panel-header{padding:16px 20px 12px;border-bottom:1px solid #2a1a08;flex-shrink:0}
+#panel-title{font-size:15px;color:#d4a850;font-weight:bold;letter-spacing:.06em}
+#panel-note{font-size:11px;color:#6b5030;margin-top:3px}
+
+#panel-body{padding:16px 20px;flex:1}
+
+/* Step controls */
+.step-bar{display:flex;gap:8px;margin-bottom:16px}
+.step-btn{
+  padding:6px 14px;background:#1e1208;border:1px solid #3a2510;
+  color:#c8a060;font-size:14px;border-radius:4px;cursor:pointer;
+  transition:all .15s;
+}
+.step-btn:hover:not(:disabled){background:#2c1a08;border-color:#8b5c1a;color:#d4a850}
+.step-btn:disabled{opacity:.25;cursor:default}
+
+/* Joseki list */
+.joseki-card{
+  padding:12px 16px;background:#1a1108;border:1px solid #2a1a08;
+  border-left:3px solid #5a3010;border-radius:0 6px 6px 0;
+  cursor:pointer;margin-bottom:8px;transition:all .15s;
+}
+.joseki-card:hover{background:#221608;border-left-color:#8b5c1a}
+.joseki-card.active{background:#221608;border-left-color:#d4a850}
+.joseki-card-name{font-size:14px;color:#e8d5a8;font-weight:bold}
+.joseki-card-note{font-size:11px;color:#6b5030;margin-top:3px}
+
+/* Tree */
+.back-btn{
+  font-size:12px;color:#8b7040;cursor:pointer;margin-bottom:14px;
+  display:inline-flex;align-items:center;gap:4px;
+  padding:4px 10px;border:1px solid #2a1a08;border-radius:4px;
+  background:#1a1108;transition:all .15s;
+}
+.back-btn:hover{color:#d4a850;border-color:#3a2510}
+
+.tree-wrap{font-size:13px}
+.tree-node-row{display:flex;align-items:flex-start;margin:1px 0}
+.move-chip{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:4px 10px;border-radius:3px;cursor:pointer;
+  border:1px solid #2a1a08;background:#1a1108;
+  color:#c8a860;transition:all .12s;white-space:nowrap;
+  font-size:13px;
+}
+.move-chip:hover{background:#221608;border-color:#3a2510}
+.move-chip.active{background:#2c1a08;border-color:#d4a850;color:#d4a850;font-weight:bold}
+.move-chip .side-s{color:#c04020;margin-right:1px}
+.move-chip .side-g{color:#3060cc;margin-right:1px}
+.move-note{font-size:10px;color:#5a4020;margin-left:6px;align-self:center;white-space:nowrap}
+.tree-children{margin-left:16px;padding-left:10px;border-left:1px solid #2a1a08}
+.branch-div{font-size:10px;color:#4a3010;padding:4px 0;display:flex;align-items:center;gap:6px}
+.branch-div::after{content:'';flex:1;height:1px;background:#2a1a08}
+
+/* Move number */
+.move-num{font-size:10px;color:#4a3010;width:20px;text-align:right;flex-shrink:0;align-self:center;margin-right:2px}
 </style>
 </head>
 <body>
-<header>将棋定跡ツリー <span>対振り飛車急戦形</span></header>
+<header>
+  <h1>将棋定跡ツリー</h1>
+  <span class="sub">対振り飛車急戦形</span>
+</header>
 <div id="app">
-  <div id="board-wrap"></div>
-  <div id="tree-wrap">
-    <div class="panel-title" id="panel-title">定跡を選んでください</div>
-    <div id="panel-body"><div id="no-data">読み込み中...</div></div>
+  <div id="left">
+    <div id="move-history">（初期局面）</div>
+    <div class="board-outer">
+      <div class="col-labels" id="col-labels"></div>
+      <div class="board-main">
+        <div id="board"></div>
+        <div class="row-labels" id="row-labels"></div>
+      </div>
+    </div>
+  </div>
+  <div id="right">
+    <div id="panel-header">
+      <div id="panel-title">定跡を選んでください</div>
+      <div id="panel-note"></div>
+    </div>
+    <div id="panel-body">
+      <div id="no-data" style="color:#4a3010;padding:20px;text-align:center">読み込み中...</div>
+    </div>
   </div>
 </div>
 
 <script>
 const DATA_URL = 'data.json';
 
-// ===== PIECES =====
 const PC = {FU:'歩',KY:'香',KE:'桂',GI:'銀',KI:'金',KA:'角',HI:'飛',OU:'玉',TO:'と',NY:'杏',NK:'圭',NG:'全',UM:'馬',RY:'龍'};
 const PROMO = {FU:'TO',KY:'NY',KE:'NK',GI:'NG',KA:'UM',HI:'RY'};
-const COL_LBL = ['９','８','７','６','５','４','３','２','１'];
-const ROW_LBL = ['一','二','三','四','五','六','七','八','九'];
+const COL = ['９','８','７','６','５','４','３','２','１'];
+const ROW = ['一','二','三','四','五','六','七','八','九'];
 
-// ===== BOARD =====
-// board[arr_row][arr_col]: arr_row 0=top(shogi row1), arr_col 0=rightmost(shogi col1)
-// shogi "col,row" → arr: arr_row=row-1, arr_col=col-1
-// display dc=0 is leftmost=col9 → arr_col = 8-dc
-
+// Board: arr[r][c], r=0 top(row1), c=0 rightmost(col1)
 function initBoard() {
-  const B = Array.from({length:9}, () => Array(9).fill(null));
-  const back = ['KY','KE','GI','KI','OU','KI','GI','KE','KY']; // arr_col 0=col1 .. 8=col9
-  for (let c=0;c<9;c++) {
-    B[8][c] = {t:back[c],s:0,p:false}; // sente row9=arr8
-    B[0][c] = {t:back[c],s:1,p:false}; // gote  row1=arr0
-  }
-  B[7][7]={t:'KA',s:0,p:false}; // 8八=col8,row8 → arr[7][7]
-  B[7][1]={t:'HI',s:0,p:false}; // 2八=col2,row8 → arr[7][1]
-  B[1][7]={t:'HI',s:1,p:false}; // 8二=col8,row2 → arr[1][7]
-  B[1][1]={t:'KA',s:1,p:false}; // 2二=col2,row2 → arr[1][1]
-  for (let c=0;c<9;c++) {
-    B[6][c]={t:'FU',s:0,p:false}; // sente pawns row7=arr6
-    B[2][c]={t:'FU',s:1,p:false}; // gote  pawns row3=arr2
-  }
+  const B = Array.from({length:9},()=>Array(9).fill(null));
+  const bk = ['KY','KE','GI','KI','OU','KI','GI','KE','KY'];
+  for(let c=0;c<9;c++){B[8][c]={t:bk[c],s:0,p:false};B[0][c]={t:bk[c],s:1,p:false}}
+  B[7][7]={t:'KA',s:0,p:false};B[7][1]={t:'HI',s:0,p:false};
+  B[1][7]={t:'HI',s:1,p:false};B[1][1]={t:'KA',s:1,p:false};
+  for(let c=0;c<9;c++){B[6][c]={t:'FU',s:0,p:false};B[2][c]={t:'FU',s:1,p:false}}
   return B;
 }
 
-function applyMove(board, mv) {
-  const B = board.map(r => r.map(c => c?{...c}:null));
-  const [tr,tc] = mv.to;
-  if (mv.drop) {
-    B[tr][tc] = {t:mv.piece, s:mv.side, p:false};
-  } else {
-    const [fr,fc] = mv.from;
-    const pc = B[fr][fc];
-    if (!pc) return B;
-    B[fr][fc] = null;
-    B[tr][tc] = {t: mv.promote ? (PROMO[pc.t]||pc.t) : pc.t, s:pc.s, p: mv.promote||pc.p};
-  }
-  return B;
+function applyMove(B,mv){
+  const N=B.map(r=>r.map(c=>c?{...c}:null));
+  const[tr,tc]=mv.to;
+  if(mv.drop){N[tr][tc]={t:mv.piece,s:mv.side,p:false}}
+  else{const[fr,fc]=mv.from;const pc=N[fr][fc];if(!pc)return N;N[fr][fc]=null;N[tr][tc]={t:mv.promote?(PROMO[pc.t]||pc.t):pc.t,s:pc.s,p:mv.promote||pc.p}}
+  return N;
 }
 
-// ===== RENDER BOARD =====
+// Render board
 function renderBoard(board, lastTo) {
-  const wrap = document.getElementById('board-wrap');
-  wrap.innerHTML = '';
+  // Col labels
+  const cl = document.getElementById('col-labels');
+  cl.innerHTML = '';
+  cl.style.cssText = 'display:flex;padding-left:22px';
+  COL.forEach(l=>{const d=document.createElement('div');d.className='col-label';d.textContent=l;cl.appendChild(d)});
 
-  const colRow = document.createElement('div');
-  colRow.className = 'col-labels';
-  COL_LBL.forEach(l => {
-    const d = document.createElement('div');
-    d.className = 'col-label'; d.textContent = l;
-    colRow.appendChild(d);
-  });
-  wrap.appendChild(colRow);
+  // Row labels
+  const rl = document.getElementById('row-labels');
+  rl.innerHTML = '';
 
-  const boardEl = document.createElement('div');
-  boardEl.style.display = 'flex';
+  const grid = document.getElementById('board');
+  grid.innerHTML = '';
 
-  const grid = document.createElement('div');
-  grid.id = 'board';
-
-  const rowLbls = document.createElement('div');
-  rowLbls.style.display = 'flex';
-  rowLbls.style.flexDirection = 'column';
-
-  for (let dr=0;dr<9;dr++) {
-    const rl = document.createElement('div');
-    rl.className = 'row-label'; rl.textContent = ROW_LBL[dr];
-    rowLbls.appendChild(rl);
-
-    for (let dc=0;dc<9;dc++) {
-      const ar=dr, ac=8-dc;
-      const cell = document.createElement('div');
-      cell.className = 'cell';
-      if (lastTo && lastTo[0]===ar && lastTo[1]===ac) cell.classList.add('last-move');
-      const pc = board[ar][ac];
-      if (pc) {
-        const sp = document.createElement('span');
-        sp.textContent = PC[pc.t]||'?';
-        sp.className = pc.s===1 ? 'piece-gote' : 'piece-sente';
-        if (pc.p) sp.classList.add('piece-promo');
+  for(let dr=0;dr<9;dr++){
+    const lbl=document.createElement('div');lbl.className='row-label';lbl.textContent=ROW[dr];rl.appendChild(lbl);
+    for(let dc=0;dc<9;dc++){
+      const ar=dr,ac=8-dc;
+      const cell=document.createElement('div');cell.className='cell';
+      if(lastTo&&lastTo[0]===ar&&lastTo[1]===ac)cell.classList.add('last-move');
+      const pc=board[ar][ac];
+      if(pc){
+        const sp=document.createElement('span');
+        sp.textContent=PC[pc.t]||'?';
+        sp.className=pc.s===1?'piece-g':'piece-s';
+        if(pc.p)sp.classList.add('piece-promo');
         cell.appendChild(sp);
       }
       grid.appendChild(cell);
     }
   }
-
-  boardEl.appendChild(grid);
-  boardEl.appendChild(rowLbls);
-  wrap.appendChild(boardEl);
 }
 
-// ===== TREE STATE =====
-let roots = [];
-let nodeMap = {};
-let currentNode = null;
-let stepPath = []; // path from root to currentNode
+// State
+let roots=[], nodeMap={}, currentNode=null;
 
-function getPathToNode(node) {
-  const path = [];
-  let cur = node;
-  while (cur) { path.unshift(cur); cur = cur._parent; }
-  return path;
-}
-
-function getBoardAt(node) {
-  const path = getPathToNode(node);
-  let b = initBoard();
-  for (const n of path) if (n.move) b = applyMove(b, n.move);
+function getPath(node){const p=[];let c=node;while(c){p.unshift(c);c=c._parent}return p}
+function getBoardAt(node){
+  let b=initBoard();
+  getPath(node).forEach(n=>{if(n.move)b=applyMove(b,n.move)});
   return b;
 }
 
-function selectNode(node) {
-  currentNode = node;
-  stepPath = getPathToNode(node);
-  const board = getBoardAt(node);
-  const lastTo = node.move ? node.move.to : null;
-  renderBoard(board, lastTo);
+function selectNode(node){
+  currentNode=node;
+  const board=getBoardAt(node);
+  renderBoard(board,node.move?node.move.to:null);
+  const path=getPath(node).filter(n=>n.move);
+  document.getElementById('move-history').textContent=
+    path.length?path.map(n=>(n.move.side===0?'▲':'△')+n.move_text).join(' '):'（初期局面）';
   renderPanel();
 }
 
-// ===== PANEL =====
-function renderPanel() {
-  const title = document.getElementById('panel-title');
-  const body = document.getElementById('panel-body');
-  body.innerHTML = '';
+function renderPanel(){
+  const title=document.getElementById('panel-title');
+  const note=document.getElementById('panel-note');
+  const body=document.getElementById('panel-body');
+  body.innerHTML='';
 
-  if (!currentNode || currentNode._isRoot === undefined) {
-    // Joseki list
-    title.textContent = '定跡を選んでください';
-    roots.forEach(r => {
-      const card = document.createElement('div');
-      card.className = 'joseki-card';
-      card.innerHTML = r.name || '(無名)';
-      if (r.note) card.innerHTML += `<div class="sub">${r.note}</div>`;
-      card.onclick = () => selectNode(r);
-      body.appendChild(card);
+  if(!currentNode||currentNode._isRoot===undefined){
+    title.textContent='定跡を選んでください';
+    note.textContent='';
+    roots.forEach(r=>{
+      const card=document.createElement('div');card.className='joseki-card';
+      card.innerHTML=`<div class="joseki-card-name">${r.name||'(無名)'}</div>${r.note?`<div class="joseki-card-note">${r.note}</div>`:''}`;
+      card.onclick=()=>selectNode(r);body.appendChild(card);
     });
     return;
   }
 
-  // Find root of current branch
-  let root = currentNode;
-  while (root._parent) root = root._parent;
-  title.textContent = root.name || '定跡';
+  let root=currentNode;while(root._parent)root=root._parent;
+  title.textContent=root.name||'定跡';
+  note.textContent=root.note||'';
 
-  // Back button
-  const back = document.createElement('div');
-  back.className = 'back-btn';
-  back.textContent = '← 一覧';
-  back.onclick = () => { currentNode = null; renderBoard(initBoard(), null); renderPanel(); };
+  // Back
+  const back=document.createElement('div');back.className='back-btn';
+  back.innerHTML='← 定跡一覧';back.onclick=()=>{currentNode=null;renderBoard(initBoard(),null);document.getElementById('move-history').textContent='（初期局面）';renderPanel()};
   body.appendChild(back);
 
-  // Move path breadcrumb
-  if (stepPath.length > 1) {
-    const bc = document.createElement('div');
-    bc.className = 'move-path';
-    bc.textContent = stepPath.filter(n=>n.move).map((n,i)=>(n.move.side===0?'▲':'△')+n.move_text).join(' ');
-    body.appendChild(bc);
-  }
-
   // Step controls
-  const ctrl = document.createElement('div');
-  ctrl.className = 'step-controls';
+  const bar=document.createElement('div');bar.className='step-bar';
+  const mk=(txt,dis,fn)=>{const b=document.createElement('button');b.className='step-btn';b.textContent=txt;b.disabled=dis;b.onclick=fn;return b};
+  bar.appendChild(mk('|◀',!currentNode._parent,()=>selectNode(root)));
+  bar.appendChild(mk('◀',!currentNode._parent,()=>{if(currentNode._parent)selectNode(currentNode._parent)}));
+  bar.appendChild(mk('▶',!currentNode.children||!currentNode.children.length,()=>{if(currentNode.children?.length)selectNode(currentNode.children[0])}));
+  body.appendChild(bar);
 
-  const btnFirst = document.createElement('button');
-  btnFirst.className = 'step-btn'; btnFirst.textContent = '|◀';
-  btnFirst.disabled = !currentNode._parent;
-  btnFirst.onclick = () => selectNode(root);
-
-  const btnPrev = document.createElement('button');
-  btnPrev.className = 'step-btn'; btnPrev.textContent = '◀';
-  btnPrev.disabled = !currentNode._parent;
-  btnPrev.onclick = () => { if (currentNode._parent) selectNode(currentNode._parent); };
-
-  const btnNext = document.createElement('button');
-  btnNext.className = 'step-btn'; btnNext.textContent = '▶';
-  btnNext.disabled = !currentNode.children || currentNode.children.length === 0;
-  btnNext.onclick = () => { if (currentNode.children && currentNode.children.length > 0) selectNode(currentNode.children[0]); };
-
-  ctrl.appendChild(btnFirst);
-  ctrl.appendChild(btnPrev);
-  ctrl.appendChild(btnNext);
-  body.appendChild(ctrl);
-
-  // Tree view
-  const treeWrap = document.createElement('div');
-  treeWrap.style.marginTop = '16px';
-
-  function renderNode(node, depth) {
-    const wrap = document.createElement('div');
-    if (node.move) {
-      const line = document.createElement('div');
-      line.className = 'tree-line';
-      const btn = document.createElement('div');
-      btn.className = 'move-btn s' + node.move.side;
-      if (currentNode && currentNode.id === node.id) btn.classList.add('active');
-      btn.textContent = (node.move.side===0?'▲':'△') + (node.move_text||'');
-      btn.onclick = () => selectNode(node);
-      line.appendChild(btn);
-      if (node.note) {
-        const note = document.createElement('span');
-        note.className = 'note-tip'; note.textContent = node.note;
-        line.appendChild(note);
-      }
-      wrap.appendChild(line);
+  // Tree
+  let moveNum=0;
+  function renderNode(node,depth){
+    const wrap=document.createElement('div');
+    if(node.move){
+      moveNum++;
+      const row=document.createElement('div');row.className='tree-node-row';
+      const num=document.createElement('div');num.className='move-num';num.textContent=moveNum+'.';
+      const chip=document.createElement('div');chip.className='move-chip';
+      if(currentNode&&currentNode.id===node.id)chip.classList.add('active');
+      const side=document.createElement('span');side.className=node.move.side===0?'side-s':'side-g';side.textContent=node.move.side===0?'▲':'△';
+      chip.appendChild(side);chip.appendChild(document.createTextNode(node.move_text||''));
+      chip.onclick=()=>selectNode(node);
+      row.appendChild(num);row.appendChild(chip);
+      if(node.note){const nt=document.createElement('div');nt.className='move-note';nt.textContent=node.note;row.appendChild(nt)}
+      wrap.appendChild(row);
     }
-    if (node.children && node.children.length) {
-      const ch = document.createElement('div');
-      ch.className = 'children';
-      node.children.forEach((c, i) => {
-        if (i > 0) {
-          const sep = document.createElement('div');
-          sep.className = 'branch-sep'; sep.textContent = '┌ 分岐';
-          ch.appendChild(sep);
-        }
-        ch.appendChild(renderNode(c, depth+1));
+    if(node.children?.length){
+      const ch=document.createElement('div');ch.className='tree-children';
+      node.children.forEach((c,i)=>{
+        if(i>0){const div=document.createElement('div');div.className='branch-div';div.textContent='分岐';ch.appendChild(div)}
+        const savedNum=moveNum;
+        ch.appendChild(renderNode(c,depth+1));
+        if(i<node.children.length-1)moveNum=savedNum;
       });
       wrap.appendChild(ch);
     }
     return wrap;
   }
-
-  treeWrap.appendChild(renderNode(root, 0));
-  body.appendChild(treeWrap);
+  body.appendChild(renderNode(root,0));
 }
 
-// ===== DATA LOAD =====
-async function loadNodes() {
-  try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
-    if (!res.ok) return null;
-    const json = await res.json();
-    return json.joseki || null;
-  } catch(e) { return null; }
+async function loadNodes(){
+  try{const r=await fetch(DATA_URL+'?t='+Date.now());if(!r.ok)return null;const j=await r.json();return j.joseki||null}
+  catch(e){return null}
 }
 
-// ===== SAMPLE DATA (used when Supabase is empty) =====
-// Coords: [arr_row, arr_col] where arr_row=shogi_row-1, arr_col=shogi_col-1
-// e.g. "7六" = col7,row6 → arr[5][6]
-const SAMPLE = [
-  {id:'root1', parent_id:null, name:'対四間飛車急戦', move_text:null, move:null, note:'四間飛車に対する急戦形'},
-  // ▲7六歩: 7七→7六 = arr[6][6]→arr[5][6]
-  {id:'n1', parent_id:'root1', move_text:'7六歩', move:{from:[6,6],to:[5,6],side:0,piece:'FU',promote:false,drop:false}, note:''},
-  // △3四歩: 3三→3四 = arr[2][2]→arr[3][2]
-  {id:'n2', parent_id:'n1', move_text:'3四歩', move:{from:[2,2],to:[3,2],side:1,piece:'FU',promote:false,drop:false}, note:''},
-  // ▲2六歩: 2七→2六 = arr[6][1]→arr[5][1]
-  {id:'n3', parent_id:'n2', move_text:'2六歩', move:{from:[6,1],to:[5,1],side:0,piece:'FU',promote:false,drop:false}, note:''},
-  // △4二飛: 8二→4二 = arr[1][7]→arr[1][3]  ← 四間飛車
-  {id:'n4', parent_id:'n3', move_text:'4二飛', move:{from:[1,7],to:[1,3],side:1,piece:'HI',promote:false,drop:false}, note:'四間飛車'},
-  // 分岐A: ▲2五歩 (棒銀準備): 2六→2五 = arr[5][1]→arr[4][1]
-  {id:'n5a', parent_id:'n4', move_text:'2五歩', move:{from:[5,1],to:[4,1],side:0,piece:'FU',promote:false,drop:false}, note:'棒銀系'},
-  // 分岐B: ▲4八銀 (急戦矢倉系): 3九→4八 = arr[8][2]→arr[7][3]
-  {id:'n5b', parent_id:'n4', move_text:'4八銀', move:{from:[8,2],to:[7,3],side:0,piece:'GI',promote:false,drop:false}, note:'急戦矢倉系'},
-  // 分岐A続き: △3三角: 2二→3三 = arr[1][1]→arr[2][2]
-  {id:'n6a', parent_id:'n5a', move_text:'3三角', move:{from:[1,1],to:[2,2],side:1,piece:'KA',promote:false,drop:false}, note:'飛車先受け'},
-  // ▲3八銀: 3九→3八 = arr[8][2]→arr[7][2]
-  {id:'n7a', parent_id:'n6a', move_text:'3八銀', move:{from:[8,2],to:[7,2],side:0,piece:'GI',promote:false,drop:false}, note:'棒銀始動'},
-];
+async function init(){
+  // Build board labels
+  renderBoard(initBoard(),null);
 
-// ===== INIT =====
-async function init() {
-  renderBoard(initBoard(), null);
+  let data=await loadNodes();
+  if(!data||!data.length){document.getElementById('no-data').textContent='データが見つかりません';return}
 
-  let data = await loadNodes();
-  if (!data || data.length === 0) data = SAMPLE;
-
-  // parse move field
-  const nodes = data.map(n => ({
-    ...n,
-    move: n.move ? (typeof n.move === 'string' ? JSON.parse(n.move) : n.move) : null
-  }));
-
-  // build tree
-  nodeMap = {};
-  nodes.forEach(n => { nodeMap[n.id] = {...n, children:[], _parent:null, _isRoot:!n.parent_id}; });
-  roots = [];
-  nodes.forEach(n => {
-    const node = nodeMap[n.id];
-    if (!n.parent_id || !nodeMap[n.parent_id]) {
-      roots.push(node);
-    } else {
-      const parent = nodeMap[n.parent_id];
-      parent.children.push(node);
-      node._parent = parent;
-    }
+  const nodes=data.map(n=>({...n,move:n.move?(typeof n.move==='string'?JSON.parse(n.move):n.move):null}));
+  nodeMap={};nodes.forEach(n=>{nodeMap[n.id]={...n,children:[],_parent:null,_isRoot:!n.parent_id}});
+  roots=[];
+  nodes.forEach(n=>{
+    const nd=nodeMap[n.id];
+    if(!n.parent_id||!nodeMap[n.parent_id])roots.push(nd);
+    else{nodeMap[n.parent_id].children.push(nd);nd._parent=nodeMap[n.parent_id]}
   });
 
   document.getElementById('no-data')?.remove();
