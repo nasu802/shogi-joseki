@@ -1,0 +1,60 @@
+{
+  "joseki": [
+    {
+      "id": "root1",
+      "parent_id": null,
+      "name": "対四間飛車急戦",
+      "move_text": null,
+      "move": null,
+      "note": "四間飛車に対する急戦形"
+    },
+    {
+      "id": "n1", "parent_id": "root1",
+      "move_text": "7六歩",
+      "move": {"from":[6,6],"to":[5,6],"side":0,"piece":"FU","promote":false,"drop":false},
+      "note": ""
+    },
+    {
+      "id": "n2", "parent_id": "n1",
+      "move_text": "3四歩",
+      "move": {"from":[2,2],"to":[3,2],"side":1,"piece":"FU","promote":false,"drop":false},
+      "note": ""
+    },
+    {
+      "id": "n3", "parent_id": "n2",
+      "move_text": "2六歩",
+      "move": {"from":[6,1],"to":[5,1],"side":0,"piece":"FU","promote":false,"drop":false},
+      "note": "飛車先を突く"
+    },
+    {
+      "id": "n4", "parent_id": "n3",
+      "move_text": "4二飛",
+      "move": {"from":[1,7],"to":[1,3],"side":1,"piece":"HI","promote":false,"drop":false},
+      "note": "四間飛車"
+    },
+    {
+      "id": "n5a", "parent_id": "n4",
+      "move_text": "2五歩",
+      "move": {"from":[5,1],"to":[4,1],"side":0,"piece":"FU","promote":false,"drop":false},
+      "note": "棒銀系"
+    },
+    {
+      "id": "n5b", "parent_id": "n4",
+      "move_text": "4八銀",
+      "move": {"from":[8,2],"to":[7,3],"side":0,"piece":"GI","promote":false,"drop":false},
+      "note": "急戦矢倉系"
+    },
+    {
+      "id": "n6a", "parent_id": "n5a",
+      "move_text": "3三角",
+      "move": {"from":[1,1],"to":[2,2],"side":1,"piece":"KA","promote":false,"drop":false},
+      "note": "飛車先受け"
+    },
+    {
+      "id": "n7a", "parent_id": "n6a",
+      "move_text": "3八銀",
+      "move": {"from":[8,2],"to":[7,2],"side":0,"piece":"GI","promote":false,"drop":false},
+      "note": "棒銀始動"
+    }
+  ]
+}
